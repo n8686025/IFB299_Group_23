@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Create a Listing</title>
+	</head>
+	<body>
+		<div>
+		  <div>
+		    <%= form_for(@listing) do |f| %>
+		      <%= f.label :address %>
+		      <%= f.text_field :address %>
+					</br>
+		      <%= f.label :price %>
+		      <%= f.number_field :price %>
+					</br>
+		     	<%= f.label :showing_dates %>
+		      <%= f.date_select :showing_dates %>
+					</br>
+		      <%= f.label :utilities %>
+		      <%= f.text_field :utilities %>
+					</br>
+		      <%= f.label :bedrooms %>
+		      <%= f.number_field :bedrooms %>
+					</br>
+		     	<%= f.label :bathrooms %>
+		      <%= f.number_field :bathrooms %>
+					</br>
+		      <%= f.label :car_parks %>
+		      <%= f.number_field :car_parks %>
+					</br>
+		     	<%= f.label :extra_info %>
+		      <%= f.text_field :extra_info %>
+					</br>
+		      <%= f.submit "Create Listing" %>
+		    <% end %>
+		  </div>
+		</div>
+	</body>
+</html>

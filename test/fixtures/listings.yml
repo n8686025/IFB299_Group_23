@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyString
+  price: 1
+  showing_dates: 2015-08-12 07:08:06
+  utilities: MyString
+  bedrooms: 1
+  bathrooms: 1
+  car_parks: 1
+  extra_info: MyString
+
+two:
+  address: MyString
+  price: 1
+  showing_dates: 2015-08-12 07:08:06
+  utilities: MyString
+  bedrooms: 1
+  bathrooms: 1
+  car_parks: 1
+  extra_info: MyString
