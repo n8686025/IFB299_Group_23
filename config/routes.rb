@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'listings/new' => 'listings#new'
   resources :listings
 
+  post '/contact' => 'contact#submit'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

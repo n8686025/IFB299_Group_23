@@ -5,5 +5,13 @@
 	</head>
 	<body>
 		<h2>Contact Us</h2>
+		<div>
+			<p>Feel free to contact us via email at test@example.com or by phone at 1234 5678 or send us a message below</p>
+			</br>
+			<%= form_tag "/contact" do %>
+			<%= text_field_tag "message" %>
+			<%= submit_tag "Send Message", :action => 'submit' %>
+			<% end %>
+		</div>
 	</body>
 </html>
