@@ -155,6 +155,7 @@ DEPENDENCIES
   coffee-rails (= 4.1.0)
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.3)
+  mail
   pg (= 0.17.1)
   rails (= 4.2.2)
   rails_12factor (= 0.0.2)
