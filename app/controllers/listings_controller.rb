@@ -16,6 +16,15 @@ class ListingsController < ApplicationController
     end
   end
 
+  def delete
+    @listing = Listing.find(params[:id])
+    if @listing.destroy
+      redirect_to root_path
+    else
+      render "listing/#{params[:id]}"
+    end
+  end
+
   private
 
     def listing_params

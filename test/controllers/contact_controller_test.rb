@@ -5,4 +5,10 @@ class ContactControllerTest < ActionController::TestCase
     get :index
     assert_response :success
   end
+
+  test "should post index" do
+  	get :index
+  	post :index, message: "Example Message"
+  	assert_response :success
+  end
 end

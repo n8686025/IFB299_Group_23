@@ -13,5 +13,8 @@
 		<h5>Bathrooms: <%= @listing.bathrooms %></h5>
 		<h5>Car Parks: <%= @listing.car_parks %> </h5>
 		<h5>Extra Info: <%= @listing.extra_info %></h5>
+		<%= form_tag "/listings/#{@listing.id}" do %>
+		<%= submit_tag "Delete Listing", :action => 'delete' %>
+		<% end %>
 	</body>
 </html>
