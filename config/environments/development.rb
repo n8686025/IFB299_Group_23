@@ -39,6 +39,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
+  # Sets up the mailing information
   Mail.defaults do
     delivery_method :smtp, {
       :address => 'smtp.sendgrid.net',
@@ -50,6 +51,4 @@ Rails.application.configure do
       :enable_starttls_auto => true
     }
   end
-
-  # Sets up the mailing information
 end
