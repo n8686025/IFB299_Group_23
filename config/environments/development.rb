@@ -38,4 +38,18 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  Mail.defaults do
+    delivery_method :smtp, {
+      :address => 'smtp.sendgrid.net',
+      :port => '587',
+      :domain => 'heroku.com',
+      :user_name => ENV['SENDGRID_USERNAME'],
+      :password => ENV['SENDGRID_PASSWORD'],
+      :authentication => :plain,
+      :enable_starttls_auto => true
+    }
+  end
+
+  # Sets up the mailing information
 end
