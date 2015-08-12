@@ -8,9 +8,11 @@ Rails.application.routes.draw do
 
   get 'contact' => 'contact#index'
   get 'listings/new' => 'listings#new'
+  get 'listings/:id' => 'listings#show'
   resources :listings
 
-  post '/contact' => 'contact#submit'
+  post 'listings/new' => 'listings#create'
+  post 'contact' => 'contact#submit'
   post 'listings/:id' => 'listings#delete'
 
   # Example of regular route:
