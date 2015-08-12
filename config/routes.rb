@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :listings
 
   post '/contact' => 'contact#submit'
+  post 'listings/:id' => 'listings#delete'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -17,4 +17,14 @@ class ListingsCreationTest < ActionDispatch::IntegrationTest
 		listing_redirect = "#{listings_path}/#{assigns(:listing).id}"
 		assert_redirected_to listing_redirect
 	end
+
+	test 'delete listings' do
+		get listings_new_path
+		post listings_path, listing: { address: "Example Address" }
+		listing_page = "#{listings_path}/#{assigns(:listing).id}"
+		assert_difference 'Listing.count', -1 do
+			post listing_page
+		end
+		assert_redirected_to root_path
+	end
 end
