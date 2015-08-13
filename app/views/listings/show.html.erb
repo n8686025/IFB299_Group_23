@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<h5>Id: <%= @listing.id %></h5>
-		<h5>Address <%= @listing.address %></h5>
+		<h5>Address: <%= @listing.address %></h5>
 		<h5>Price: <%= @listing.price %></h5>
 		<h5>Showing Dates: <%= @listing.showing_dates %></h5>
 		<h5>Utilities: <%= @listing.utilities %></h5>
@@ -16,5 +16,7 @@
 		<%= form_tag "/listings/#{@listing.id}" do %>
 		<%= submit_tag "Delete Listing", :action => 'delete' %>
 		<% end %>
+	</br>
+		<%= link_to 'Edit Listing', "/listings/#{@listing.id}/edit" %>
 	</body>
 </html>

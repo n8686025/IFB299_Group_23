@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'contact' => 'contact#index'
+  get 'listings' => 'listings#index'
   get 'listings/new' => 'listings#new'
   get 'listings/:id' => 'listings#show'
   get 'listings/:id/edit' => 'listings#edit'
