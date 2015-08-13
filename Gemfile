@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.0'
+
 gem 'rails',        '4.2.2'
 gem 'sass-rails',   '5.0.2'
 gem 'uglifier',     '2.5.3'
@@ -11,10 +13,12 @@ gem 'sdoc',         '0.4.0', group: :doc
 gem 'mail'
 
 group :development, :test do
-  gem 'sqlite3',     '1.3.9'
-  gem 'byebug',      '3.4.0'
-  gem 'web-console', '2.0.0.beta3'
-  gem 'spring',      '1.1.3'
+  gem 'sqlite3',     			'1.3.9'
+  gem 'byebug',      			'3.4.0'
+  gem 'web-console', 			'2.0.0.beta3'
+  gem 'spring',      			'1.1.3'
+  gem 'cucumber-rails',		'1.4.2'
+  gem 'database_cleaner', '1.4.1'
 end
 
 group :production do
