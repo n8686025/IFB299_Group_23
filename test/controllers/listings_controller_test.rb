@@ -13,36 +13,37 @@ class ListingsControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-  	get :new
-  	post :create, listing: { address: "Example Address" }
+  	get :index
 
-  	get :show, id: assigns(:listing).id
+  	get :show, id: assigns[:listings][0].id
   	assert_response :success
   end
 
   test "should post delete" do
-  	get :new
-  	post :create, listing: { address: "Example Address" }
-  	get :show, id: assigns(:listing).id
+  	get :index
+  	get :show, id: assigns[:listings][0].id
 
-  	post :show, id: assigns(:listing).id
+  	post :show, id: assigns[:listings][0].id
   	assert_response :success
   end
 
   test "should get edit" do
-    get :new
-    post :create, listing: { address: "Example Address" }
+    get :index
 
-    get :edit, id: assigns(:listing).id
+    get :edit, id: assigns[:listings][0].id
     assert_response :success
   end
 
   test "should post edit" do
-    get :new
-    post :create, listing: { address: "Example Address" }
-    get :edit, id: assigns(:listing).id
+    get :index
+    get :edit, id: assigns[:listings][0].id
 
-    post :edit, id: assigns(:listing).id, :listing => { address: "Test Address" }
+    post :edit, id: assigns[:listings][0].id, :listing => { address: "Test Address" }
+    assert_response :success
+  end
+
+  test "should get index" do
+    get :index
     assert_response :success
   end
 end

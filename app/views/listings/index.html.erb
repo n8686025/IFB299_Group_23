@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Listings</title>
+	</head>
+	<body>
+		<%= link_to 'Create Listing', '/listings/new' %>
+		<ul>
+			<% @listings.each do |listing| %>
+				<li>Address: <%= listing.address %></li>
+				<li>Price: <%= listing.price %></li>
+				<li><%= link_to 'View Listing', listing %></li>
+			<% end %>
+		</ul>
+	</br>
+	</body>
+</html>

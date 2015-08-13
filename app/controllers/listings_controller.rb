@@ -38,6 +38,10 @@ class ListingsController < ApplicationController
     end
   end
 
+  def index
+    @listings = Listing.all
+  end
+
   private
 
     def listing_params
