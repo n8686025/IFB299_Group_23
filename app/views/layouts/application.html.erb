@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<a href='/'>Home</a>
+				<a href='contact'>Contact</a>
+				<%= link_to 'Listings', listings_path %>
+			</ul>
+		</div>
+	<%= yield %>
 
-<%= yield %>
-
-</body>
+	</body>
 </html>
