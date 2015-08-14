@@ -1,5 +1,3 @@
-require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
-
 Given(/^I am on (.+)$/) do |page_name|
   visit path_to(page_name)
 end
@@ -26,7 +24,6 @@ Then(/^I should see page title as (.+)$/) do |title|
 end
 
 Then(/^I should see the page for the listing with address (.+)$/) do |listing_address|
-	p Listing.all
 	listing = Listing.find_by_address(listing_address)
 	assert_equal "/listings/#{listing.id}", current_path
 end
@@ -41,15 +38,4 @@ end
 
 And(/^I click the (.+) link$/) do |link|
 	first(:link, link).click
-end
-
-And(/^I create a listing$/) do
-	Listing.new(:address => 'Test Address',
-  						:price => 1,
-  						:showing_dates => DateTime.civil(2015,8,12,7,8,6),
-  						:utilities => 'MyString',
-  						:bedrooms => 1,
-  						:bathrooms => 1,
-  						:car_parks => 1,
-  						:extra_info => 'MyString')
 end
