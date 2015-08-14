@@ -15,6 +15,13 @@ When(/^I enter all required details for a listing$/) do
 	fill_in 'listing[extra_info]', :with => 'Great location'
 end
 
+When(/^I enter all required details for an email$/) do
+	fill_in 'name', :with => 'Example name'
+	fill_in 'email', :with => 'test@example.com'
+	fill_in 'phone', :with => '1234 5678'
+	fill_in 'message', :with => 'Test Message'
+end
+
 Then(/^I should be on (.+)$/) do |page_name|
 	assert_equal path_to(page_name), current_path
 end
