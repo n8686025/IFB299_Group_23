@@ -1,4 +1,6 @@
-listing = Listing.new(:address => 'MyString',
+Listing.destroy_all
+listing = Listing.new(:id => 1,
+						:address => 'MyString',
 						:price => 1,
 						:showing_dates => DateTime.new(2015,8,12,7,8,6),
 						:utilities => 'MyString',

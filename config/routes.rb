@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  get 'contact' => 'contact#index'
   get 'listings' => 'listings#index'
   get 'listings/new' => 'listings#new'
   get 'listings/:id' => 'listings#show'
@@ -14,7 +13,7 @@ Rails.application.routes.draw do
   resources :listings
 
   post 'listings/new' => 'listings#create'
-  post 'contact' => 'contact#submit'
+  post '/' => 'home#submit'
   post 'listings/:id' => 'listings#delete'
   post 'listings/:id/edit' => 'listings#update'
 
